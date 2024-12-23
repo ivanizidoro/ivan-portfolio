@@ -24,31 +24,75 @@ const projects = [
     num: "01",
     category: "frontend",
     title: "Project 1",
-    description: "Description of project 1",
-    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
-    image: "/assets/work/thumb1.png",
-    live: "",
-    gitgub: "",
+    description:
+      "Projeto freelance realizado juntos com a equipe da CodeWorks, com o intuito de criar um site para uma clínica de estética.",
+    stack: [{ name: "React.js" }, { name: "Styled-components" }],
+    image: "/assets/work/portfolio-1.png",
+    live: "https://waleriatayres.com.br/",
+    gitgub: "https://github.com/CodeWorks-BR/Elayane-Estetica",
   },
   {
     num: "02",
-    category: "fullstack",
+    category: "frontend",
     title: "Project 2",
-    description: "Description of project 1",
-    stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "Node.js" }],
-    image: "/assets/work/thumb2.png",
-    live: "",
-    gitgub: "",
+    description:
+      "Nesse projeto foi criando com intuito de replicar o site de Filmes, foram utilizado REACT, e estou trabalhando no Back-end do mesmo, para ficar de forma mais dinâmica.",
+    stack: [{ name: "React.js" }, { name: "Styled-components" }],
+    image: "/assets/work/portfolio-2.png",
+    live: "https://filmes-ivan.netlify.app/",
+    gitgub: "https://github.com/ivanizidoro/movie-app",
   },
   {
     num: "03",
     category: "frontend",
     title: "Project 3",
-    description: "Description of project 1",
-    stack: [{ name: "Netx.js" }, { name: "Tailwind.css" }],
-    image: "/assets/work/thumb3.png",
+    description:
+      "Nesse projeto foi criado tudo em React, Styled-components. Com o intuito de fortalecer minha habilida",
+    stack: [{ name: "React.js" }, { name: "Styled-components" }],
+    image: "/assets/work/portfolio-4.png",
     live: "",
-    gitgub: "",
+    gitgub: "https://github.com/ivanizidoro/Instagram-React",
+  },
+  {
+    num: "04",
+    category: "frontend",
+    title: "Project 4",
+    description: "",
+    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
+    image: "/assets/work/portfolio-6.png",
+    live: "https://ivanizidoro.github.io/PORTFOLIO-1/",
+    gitgub: "https://github.com/ivanizidoro/PORTFOLIO-1",
+  },
+  {
+    num: "05",
+    category: "frontend",
+    title: "Project 5",
+    description:
+      "Nesse projeto tem o intuito dos clientes realizarem um breve cadastro, e foram utilizado CSS3 e HTML5",
+    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
+    image: "/assets/work/portfolio-7.png",
+    live: "https://ivanizidoro.github.io/Tela-de-Login/",
+    gitgub: "https://github.com/ivanizidoro/Tela-de-Login",
+  },
+  {
+    num: "06",
+    category: "frontend",
+    title: "Project 6",
+    description: "Conversor de Moedas",
+    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
+    image: "/assets/work/portfolio-9.png",
+    live: "https://ivanizidoro.github.io/PROJETO-JAVASCRIPT-1/",
+    gitgub: "https://github.com/ivanizidoro/PROJETO-JAVASCRIPT-1",
+  },
+  {
+    num: "07",
+    category: "frontend",
+    title: "Project 7",
+    description: "",
+    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
+    image: "/assets/work/portfolio-11.png",
+    live: "https://ivanizidoro.github.io/Portfolio/",
+    gitgub: "https://github.com/ivanizidoro/Portfolio",
   },
 ];
 
@@ -102,7 +146,7 @@ const Work = () => {
               {/* buttons */}
               <div className="flex items-center gap-4">
                 {/* live project button */}
-                <Link href={project.live}>
+                <Link href={project.live} target="_blank">
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] flex items-center justify-center rounded-full bg-white/5 group">
@@ -115,7 +159,7 @@ const Work = () => {
                   </TooltipProvider>
                 </Link>
                 {/* github project button */}
-                <Link href={project.gitgub}>
+                <Link href={project.gitgub} target="_blank">
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] flex items-center justify-center rounded-full bg-white/5 group">

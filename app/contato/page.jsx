@@ -35,8 +35,36 @@ const info = [
 ];
 
 import { motion } from "framer-motion";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 const Contato = () => {
+  const form = useRef(); // Referência para o formulário
+
+  // Função para enviar o e-mail
+  const sendEmail = (e) => {
+    e.preventDefault(); // Evitar recarregamento da página
+
+    emailjs
+      .sendForm(
+        "service_qyirb41", // Substitua pelo seu Service ID do EmailJS
+        "template_lxeqkot", // Substitua pelo seu Template ID do EmailJS
+        form.current, // Referência ao formulário
+        "QGqRIKmHo0X_nYhkl" // Substitua pela sua Public Key do EmailJS
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert("Mensagem enviado com sucesso!");
+          form.current.reset(); // Limpar o formulário após o envio
+        },
+        (error) => {
+          console.log(error.text);
+          alert("Erro ao enviar mensagem. Tente novamente mais tarde.");
+        }
+      );
+  };
+
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -50,7 +78,11 @@ const Contato = () => {
         <div className="flex flex-col xl:flex-row gap-[30px]">
           {/* form */}
           <div className="xl:w-[54%] order-2 xl:order-none">
-            <from className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
+            <form
+              className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl"
+              ref={form}
+              onSubmit={sendEmail}
+            >
               <h3 className="text-4xl text-accent">Vamos trabalhar juntos</h3>
               <p className="text-white/60">
                 Programar em conjunto é transformar ideias em soluções
@@ -59,35 +91,59 @@ const Contato = () => {
               </p>
               {/* input */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
-                <Input type="firstname" placeholder="Nome" />
-                <Input type="lastname" placeholder="Sobrenome" />
-                <Input type="email" placeholder="Endereço de e-mail" />
-                <Input type="phone" placeholder="Numero de telefone" />
+                <Input
+                  type="text"
+                  name="firstname"
+                  placeholder="Nome"
+                  required
+                />
+                <Input
+                  type="text"
+                  name="lastname"
+                  placeholder="Sobrenome"
+                  required
+                />
+                <Input
+                  type="email"
+                  name="email"
+                  placeholder="Endereço de e-mail"
+                  required
+                />
+                <Input
+                  type="tel"
+                  name="phone"
+                  placeholder="Numero de telefone"
+                  required
+                />
               </div>
               {/* select */}
-              <Select>
+              <Select name="service" required>
                 <SelectTrigger className="w-full">
                   <SelectValue placeholder="Selecione um serviço" />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectGroup>
-                    <SelectLabel>Selecione um serviço</SelectLabel>
-                    <SelectItem value="est">
+                    <SelectLabel value="">Selecione um serviço</SelectLabel>
+                    <SelectItem value="Full Stack">
                       Desenvolvedor Full Stack
                     </SelectItem>
-                    <SelectItem value="cst">Desenvolvedor Front-end</SelectItem>
-                    <SelectItem value="mst">Desenvolvedor Back-end</SelectItem>
+                    <SelectItem value="Front-end">Desenvolvedor Front-end</SelectItem>
+                    <SelectItem value="Back-end">Desenvolvedor Back-end</SelectItem>
                   </SelectGroup>
                 </SelectContent>
               </Select>
               {/* textarea */}
               <Textarea
+                name="message"
                 className="h-[200px]"
                 placeholder="Digite sua mensagem aqui."
+                required
               />
               {/* btn */}
-              <Button className="max-w-40">Enviar</Button>
-            </from>
+              <Button className="max-w-40" type="submit">
+                Enviar
+              </Button>
+            </form>
           </div>
           {/* info */}
           <div className="flex-1 flex items-center xl:justify-end order-1 xl:order-none mb-8 xl:mb-0">

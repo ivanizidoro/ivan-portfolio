@@ -19,7 +19,7 @@ const Header = () => {
         {/*Desktop nav & hire me button*/}
         <div className="hidden xl:flex items-center gap-8">
           <Nav />
-          <Link href="/contato">
+          <Link href="https://wa.link/tf28uk" target="_blank">
             <Button>Contrate-me</Button>
           </Link>
         </div>

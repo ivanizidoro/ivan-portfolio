@@ -21,6 +21,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pt-br">
       <body className={`${jetbrains_Mono.variable} antialiased`}>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
         <Header />
         <StairTransition />
         <PageTransition>{children}</PageTransition>

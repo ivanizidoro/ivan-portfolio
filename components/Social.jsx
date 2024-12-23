@@ -3,9 +3,9 @@ import Link from "next/link";
 import { FaGithub, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 
 const socials = [
-  { icon: <FaGithub />, path: "" },
-  { icon: <FaLinkedinIn />, path: "" },
-  { icon: <FaInstagram />, path: "" },
+  { icon: <FaGithub />, path: "https://github.com/ivanizidoro" },
+  { icon: <FaLinkedinIn />, path: "https://www.linkedin.com/in/ivan-izidoro" },
+  { icon: <FaInstagram />, path: "https://www.instagram.com/ivann_izidoro/" },
 ];
 
 const Social = ({ containerStyles, iconStyles }) => {
@@ -13,7 +13,7 @@ const Social = ({ containerStyles, iconStyles }) => {
     <div className={containerStyles}>
       {socials.map((item, index) => {
         return (
-          <Link key={index} href={item.path} className={iconStyles}>
+          <Link key={index} href={item.path} className={iconStyles} target="_blank">
             {item.icon}
           </Link>
         );
