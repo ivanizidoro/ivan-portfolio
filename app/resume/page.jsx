@@ -89,7 +89,7 @@ O aprendizado é baseado em projetos práticos, sob a orientação do experiente
 
 // skills data
 const skills = {
-  title: "Minhas Hbilidadea",
+  title: "Minhas Habilidades",
   description:
     "Sou um desenvolvedor full stack com experiência em criar e manter aplicações web completas, desde o design e implementação do frontend até a gestão e desenvolvimento do backend. Tenho habilidades em diversas tecnologias como HTML, CSS, JavaScript, frameworks modernos como React ou Angular, e stacks backend como Node.js, Django ou Laravel. Além disso, possuo conhecimentos sólidos em bancos de dados relacionais e não relacionais, integração de APIs e metodologias ágeis.",
   skillList: [
