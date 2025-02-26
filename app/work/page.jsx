@@ -26,7 +26,7 @@ const projects = [
     title: "Project 1",
     description:
       "Projeto freelance realizado juntos com a equipe da CodeWorks, com o intuito de criar um site para uma clínica de estética.",
-    stack: [{ name: "React.js" }, { name: "Styled-components" }],
+    stack: [{ name: "HTML" }, { name: "CSS" }, { name: "Javascript" }],
     image: "/assets/work/portfolio-1.png",
     live: "https://waleriatayres.com.br/",
     gitgub: "https://github.com/CodeWorks-BR/Elayane-Estetica",
@@ -36,11 +36,15 @@ const projects = [
     category: "frontend",
     title: "Project 2",
     description:
-      "Nesse projeto foi criando com intuito de replicar o site de Filmes, foram utilizado REACT, e estou trabalhando no Back-end do mesmo, para ficar de forma mais dinâmica.",
-    stack: [{ name: "React.js" }, { name: "Styled-components" }],
-    image: "/assets/work/portfolio-2.png",
-    live: "https://filmes-ivan.netlify.app/",
-    gitgub: "https://github.com/ivanizidoro/movie-app",
+      "O site da NetVIP Telecom é uma plataforma moderna desenvolvida com React.js, utilizando Styled-Components para estilização e React Router DOM para a navegação entre páginas.",
+    stack: [
+      { name: "React.js" },
+      { name: "Styled-components" },
+      { name: "React Router Dom" },
+    ],
+    image: "/assets/work/netviptelecom.png",
+    live: "https://www.netviptelecom.com.br/",
+    gitgub: "https://github.com/ivanizidoro/netvip-telecom-2.0",
   },
   {
     num: "03",
