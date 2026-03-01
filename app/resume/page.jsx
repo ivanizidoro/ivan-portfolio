@@ -19,7 +19,7 @@ const about = {
   info: [
     { fieldName: "Nome", fieldValue: "Ivan Izidoro" },
     { fieldName: "Telefone", fieldValue: "(81) 98288-3978" },
-    { fieldName: "Experiência", fieldValue: "1+ Anos" },
+    { fieldName: "Experiência", fieldValue: "2+ Anos" },
     { fieldName: "Email", fieldValue: "contato@ivanizidoro.com.br" },
     { fieldName: "Nacionalidade", fieldValue: "Brasileiro" },
     { fieldName: "Freelance", fieldValue: "Disponível" },
@@ -96,7 +96,7 @@ const skills = {
     { icon: <FaHtml5 />, name: "html 5" },
     { icon: <FaCss3 />, name: "css 3" },
     { icon: <FaJs />, name: "javascript" },
-    { icon: <FaReact />, name: "react.js" },
+    { icon: <FaReact />, name: "react.js / react Native" },
     { icon: <SiNextdotjs />, name: "next.js" },
     { icon: <SiTailwindcss />, name: "tailwind.css" },
     { icon: <FaNodeJs />, name: "node.js" },
