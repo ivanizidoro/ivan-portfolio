@@ -25,24 +25,26 @@ const projects = [
     category: "frontend",
     title: "Project 1",
     description:
-      "Projeto freelance realizado juntos com a equipe da CodeWorks, com o intuito de criar um site para uma clínica de estética.",
-    stack: [{ name: "HTML" }, { name: "CSS" }, { name: "Javascript" }],
+      "Desenvolvimento de website institucional para provedor de internet utilizando React, TypeScript e Vite. Projeto focado em performance, design responsivo, animações modernas e experiência do usuário, seguindo boas práticas de desenvolvimento front-end.",
+    stack: [
+      { name: "React, React Router" },
+      { name: "TypeScript" },
+      { name: "Styled Components" },
+      { name: "Vite" },
+      { name: "Framer Motion" },
+    ],
     image: "/assets/work/portfolio-1.png",
-    live: "https://waleriatayres.com.br/",
-    gitgub: "https://github.com/CodeWorks-BR/Elayane-Estetica",
+    live: "https://netviptelecom.com.br/",
+    gitgub: "https://github.com/ivanizidoro/netvip-telecom-2.0",
   },
   {
     num: "02",
-    category: "frontend",
+    category: "React Native",
     title: "Project 2",
     description:
-      "O site da NetVIP Telecom é uma plataforma moderna desenvolvida com React.js, utilizando Styled-Components para estilização e React Router DOM para a navegação entre páginas.",
-    stack: [
-      { name: "React.js" },
-      { name: "Styled-components" },
-      { name: "React Router Dom" },
-    ],
-    image: "/assets/work/netviptelecom.png",
+      'Desenvolvimento do aplicativo "Minha NetVIP", plataforma de autoatendimento para clientes de provedor de internet. Construído com React Native, Expo e TypeScript, oferecendo consulta de faturas, geração de QR Code para pagamento, notificações push, suporte ao cliente e integração com sistemas corporativos. O aplicativo visa melhorar a experiência do cliente, proporcionando acesso fácil a informações e serviços relacionados à conta de internet, além de facilitar o processo de pagamento e suporte.',
+    stack: [{ name: "React Native" }, { name: "Expo" }, { name: "TypeScript" }],
+    image: "/assets/work/Whatsapp.jpeg",
     live: "https://www.netviptelecom.com.br/",
     gitgub: "https://github.com/ivanizidoro/netvip-telecom-2.0",
   },
@@ -192,12 +194,12 @@ const Work = () => {
                       {/* overlay */}
                       <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
                       {/* image */}
-                      <div className="relative w-full h-full">
+                      <div className="relative h-full w-full flex items-center justify-center">
                         <Image
                           src={project.image}
                           fill
-                          className="object-cover"
-                          alt=""
+                          alt={project.title}
+                          className="object-contain"
                         />
                       </div>
                     </div>
