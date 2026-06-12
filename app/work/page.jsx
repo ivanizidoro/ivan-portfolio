@@ -44,9 +44,9 @@ const projects = [
     description:
       'Desenvolvimento do aplicativo "Minha NetVIP", plataforma de autoatendimento para clientes de provedor de internet. Construído com React Native, Expo e TypeScript, oferecendo consulta de faturas, geração de QR Code para pagamento, notificações push, suporte ao cliente e integração com sistemas corporativos. O aplicativo visa melhorar a experiência do cliente, proporcionando acesso fácil a informações e serviços relacionados à conta de internet, além de facilitar o processo de pagamento e suporte.',
     stack: [{ name: "React Native" }, { name: "Expo" }, { name: "TypeScript" }],
-    image: "/assets/work/Whatsapp.jpeg",
+    image: "/assets/work/Whatsapp.png",
     live: "https://www.netviptelecom.com.br/",
-    gitgub: "https://github.com/ivanizidoro/netvip-telecom-2.0",
+    gitgub: "https://play.google.com/store/apps/details?id=com.netvipcompany.netviptelecom",
   },
   {
     num: "03",
